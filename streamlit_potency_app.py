@@ -79,5 +79,5 @@ with st.expander("🧠 Feature Contributions (SHAP)", expanded=False):
     shap_values = explainer(input_data)
 
     plt.figure(figsize=(8, 4))
-    shap.bar_plot(shap_values[0], feature_names=input_data.columns)
+    shap.bar_plot(shap_values.values[0], feature_names=input_data.columns)
     st.pyplot()
