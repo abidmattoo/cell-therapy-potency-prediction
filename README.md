@@ -1,6 +1,34 @@
-# Cell Therapy Potency Prediction using Machine Learning
+# 🧬 Cell Therapy Potency Predictor
 
-This project simulates critical quality attributes (CQAs) for a cell therapy product and trains a machine learning model to predict **potency (%)** using Random Forest regression. The notebook includes SHAP explainability to visualize the contribution of input parameters to each prediction.
+🚀 **Live App**: [Launch on Streamlit](https://cell-therapy-potency-prediction-cbb45woazyamu7wbzvw6uw.streamlit.app)
+
+This dashboard predicts **potency (%)** of a cell therapy product based on assay and manufacturing process parameters.  
+Built using `RandomForestRegressor` + `SHAP` for explainability, and deployed on **Streamlit Cloud**.
+
+---
+
+## 🔍 Features
+
+- Input sliders for key CMC parameters (MOI, IL-2, viability, etc.)
+- Real-time potency prediction
+- SHAP-based interpretability of feature contributions
+- Fully interactive and publicly accessible
+
+---
+
+## 📁 Files
+
+- `streamlit_potency_app.py` – Main Streamlit app
+- `requirements.txt` – Python dependencies
+
+---
+
+## 🛠 How to Run Locally
+
+```bash
+pip install -r requirements.txt
+streamlit run streamlit_potency_app.py
+
 
 ## 📊 Project Overview
 
