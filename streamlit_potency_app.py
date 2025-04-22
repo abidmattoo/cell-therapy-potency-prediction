@@ -79,7 +79,6 @@ with st.expander("🧠 Feature Contributions (SHAP)", expanded=False):
     shap_values = explainer.shap_values(input_data)
 
     st.write("SHAP Summary (single prediction):")
-    st.set_option('deprecation.showPyplotGlobalUse', True)
-plt.figure(figsize=(8, 4))
+   plt.figure(figsize=(8, 4))
 shap.bar_plot(shap_values[0], feature_names=input_data.columns)
 st.pyplot()
