@@ -78,7 +78,6 @@ with st.expander("🧠 Feature Contributions (SHAP)", expanded=False):
     explainer = shap.TreeExplainer(model)
     shap_values = explainer.shap_values(input_data)
 
-    st.set_option('deprecation.showPyplotGlobalUse', False)
     st.write("SHAP Summary (single prediction):")
     shap.initjs()
     shap.force_plot(explainer.expected_value, shap_values[0], input_data.iloc[0], matplotlib=True, show=False)
