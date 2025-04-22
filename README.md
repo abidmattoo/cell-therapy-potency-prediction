@@ -1,6 +1,6 @@
 # 🧬 Cell Therapy Potency Predictor
 
-🚀 **Live App**: [Launch on Streamlit](https://cell-therapy-potency-prediction-xyz.streamlit.app) 
+🚀 **Live App**: [Launch on Streamlit](https://cell-therapy-potency-prediction-cbb45woazyamu7wbrzw6uw.streamlit.app/)
 
 This dashboard predicts **potency (%)** of a cell therapy product based on assay and manufacturing process parameters.  
 Built using `RandomForestRegressor` + `SHAP` for explainability, and deployed on **Streamlit Cloud**.
