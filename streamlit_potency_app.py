@@ -75,10 +75,9 @@ st.metric("Potency (%)", f"{predicted_potency:.2f}")
 
 # SHAP explainability
 with st.expander("🧠 Feature Contributions (SHAP)", expanded=False):
-    explainer = shap.TreeExplainer(model)
-    shap_values = explainer.shap_values(input_data)
+    explainer = shap.Explainer(model)
+    shap_values = explainer(input_data)
 
-    st.write("SHAP Summary (single prediction):")
-   plt.figure(figsize=(8, 4))
-shap.bar_plot(shap_values[0], feature_names=input_data.columns)
-st.pyplot()
+    plt.figure(figsize=(8, 4))
+    shap.bar_plot(shap_values[0], feature_names=input_data.columns)
+    st.pyplot()
