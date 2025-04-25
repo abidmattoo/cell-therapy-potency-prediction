@@ -92,6 +92,18 @@ Includes:
 - 🔍 Feature importance analysis
 
 Then open `Potency_Model_Abid.ipynb` and run the notebook.
+---
+
+## 🌐 Streamlit App: Cytotoxicity Classifier
+
+🧬 Predict whether a cell therapy batch passes cytotoxicity-based release criteria (70–130%) using Random Forest.
+
+▶️ [Launch Cytotoxicity Classifier on Streamlit](https://yourusername.streamlit.app)
+
+Includes:
+- ✅ Binary classification (`RandomForestClassifier`)
+- 📊 Confusion matrix, ROC curve, accuracy
+- 📈 Feature importance bar plot
 
 ## 👤 Author
 
