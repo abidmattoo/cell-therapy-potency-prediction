@@ -73,6 +73,23 @@ cd cell-therapy-potency-prediction
 pip install -r requirements.txt
 jupyter notebook
 ```
+---
+
+## 🆕 Cytotoxicity-Based Potency Classifier (70–130%)
+
+📄 [Cytotoxicity_Potency_Classifier.ipynb](./Cytotoxicity_Potency_Classifier.ipynb)
+
+This notebook simulates a **cytotoxicity-based potency assay** (e.g., One-Titer Glo) and classifies whether a batch **passes release criteria** (70–130%) based on CMC inputs like:
+
+- Transduction efficiency
+- Viability
+- Activation marker expression
+- Passage number
+
+Includes:
+- ✅ Binary classification model (`RandomForestClassifier`)
+- 📊 Confusion matrix, ROC curve, accuracy
+- 🔍 Feature importance analysis
 
 Then open `Potency_Model_Abid.ipynb` and run the notebook.
 
