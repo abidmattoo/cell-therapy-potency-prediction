@@ -98,7 +98,7 @@ Then open `Potency_Model_Abid.ipynb` and run the notebook.
 
 🧬 Predict whether a cell therapy batch passes cytotoxicity-based release criteria (70–130%) using Random Forest.
 
-▶️ [Launch Cytotoxicity Classifier on Streamlit](https://yourusername.streamlit.app)
+▶️ [Launch Cytotoxicity Classifier on Streamlit](https://cytotoxicitypotencyclassifieripynb-hz9tt3cfnucrqcmzjf2nqu.streamlit.app/))
 
 Includes:
 - ✅ Binary classification (`RandomForestClassifier`)
