@@ -116,6 +116,20 @@ Predict **potency (%)** based on:
 
 ▶️ [Launch DOE Optimizer](https://cell-therapy-potency-prediction-7m3d9uyefc5zhaqwrby3ss.streamlit.app/)
 
+---
+
+## ❄️ Streamlit App: Stability Predictor
+
+Simulate **potency degradation over time** under different storage conditions (2–8°C, –20°C, –80°C).  
+Predict estimated shelf-life based on potency staying above 70%.
+
+▶️ [Launch Stability Predictor](https://cell-therapy-potency-prediction-dfo2sylfcffjx9nbu6edd4.streamlit.app/)
+
+Includes:
+- ✅ Stability curve plotting
+- 📉 Shelf life estimation
+- 📈 Interactive temperature-based modeling
+
 
 ## 👤 Author
 
