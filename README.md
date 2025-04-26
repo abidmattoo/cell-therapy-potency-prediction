@@ -105,6 +105,12 @@ Includes:
 - 📊 Confusion matrix, ROC curve, accuracy
 - 📈 Feature importance bar plot
 
+## ⚙️ Streamlit App: DOE Potency Optimizer
+
+Predict **potency (%)** based on:
+- MOI
+- Culture Days
+- Activation Marker %
 ## 👤 Author
 
 Abid Mattoo  
