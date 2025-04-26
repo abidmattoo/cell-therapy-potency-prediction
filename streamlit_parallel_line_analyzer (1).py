@@ -1,4 +1,3 @@
-
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -20,16 +19,23 @@ if uploaded_file:
 
     # Plot data
     st.subheader("📈 Dose-Response Linear Plot")
-    import seaborn as sns
-    plt.figure(figsize=(8, 6))
-    sns.scatterplot(data=df, x="E_T_Ratio", y="Killing(%)", hue="Sample", style="Sample", s=100)
 
-    for sample_type, color in zip(["Reference", "Test"], ["blue", "orange"]):
+    plt.figure(figsize=(8, 6))
+    markers = {'Reference': 'o', 'Test': 's'}
+    colors = {'Reference': 'blue', 'Test': 'orange'}
+
+    for sample_type in ["Reference", "Test"]:
         subset = df[df["Sample"] == sample_type]
+        plt.scatter(subset["E_T_Ratio"], subset["Killing(%)"],
+                    label=sample_type,
+                    marker=markers[sample_type],
+                    color=colors[sample_type],
+                    s=100)
+
         fit = np.polyfit(np.log10(subset["E_T_Ratio"]), subset["Killing(%)"], 1)
         fit_fn = np.poly1d(fit)
         x_vals = np.linspace(subset["E_T_Ratio"].min(), subset["E_T_Ratio"].max(), 100)
-        plt.plot(x_vals, fit_fn(np.log10(x_vals)), label=f"{sample_type} Fit", linestyle="--", color=color)
+        plt.plot(x_vals, fit_fn(np.log10(x_vals)), linestyle="--", color=colors[sample_type])
 
     plt.xscale('log')
     plt.xlabel("E:T Ratio (log scale)")
@@ -57,6 +63,6 @@ if uploaded_file:
     st.write(f"Test Intercept: **{test_intercept:.2f}**")
     st.write(f"**Relative Potency (RP): {relative_potency:.2f}**")
 
-    # Optional: Check parallelism (simple slope difference)
+    # Optional: Check parallelism
     slope_difference = abs(ref_slope - test_slope)
     st.write(f"Slope Difference (abs): **{slope_difference:.2f}**")
