@@ -2,10 +2,8 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import seaborn as sns
 from scipy import stats
 
-# Set Streamlit page config
 st.set_page_config(page_title="Parallel Line Bioassay Analyzer", layout="centered")
 st.title("🧬 Parallel Line Bioassay Analyzer (Relative Potency Calculator)")
 
@@ -22,22 +20,31 @@ if uploaded_file:
 
     # Plot data
     st.subheader("📈 Dose-Response Linear Plot")
-    plt.figure(figsize=(8, 6))
-    sns.scatterplot(data=df, x="E_T_Ratio", y="Killing(%)", hue="Sample", style="Sample", s=100)
+    fig, ax = plt.subplots(figsize=(8, 6))
 
-    for sample_type, color in zip(["Reference", "Test"], ["blue", "orange"]):
+    markers = {'Reference': 'o', 'Test': 's'}
+    colors = {'Reference': 'blue', 'Test': 'orange'}
+
+    for sample_type in ["Reference", "Test"]:
         subset = df[df["Sample"] == sample_type]
+        ax.scatter(subset["E_T_Ratio"], subset["Killing(%)"],
+                   label=sample_type,
+                   marker=markers[sample_type],
+                   color=colors[sample_type],
+                   s=100)
+
         fit = np.polyfit(np.log10(subset["E_T_Ratio"]), subset["Killing(%)"], 1)
         fit_fn = np.poly1d(fit)
         x_vals = np.linspace(subset["E_T_Ratio"].min(), subset["E_T_Ratio"].max(), 100)
-        plt.plot(x_vals, fit_fn(np.log10(x_vals)), label=f"{sample_type} Fit", linestyle="--", color=color)
+        ax.plot(x_vals, fit_fn(np.log10(x_vals)), linestyle="--", color=colors[sample_type])
 
-    plt.xscale('log')
-    plt.xlabel("E:T Ratio (log scale)")
-    plt.ylabel("% Cytotoxicity / % Killing")
-    plt.grid(True)
-    plt.legend(title="Sample")
-    st.pyplot(plt)
+    ax.set_xscale('log')
+    ax.set_xlabel("E:T Ratio (log scale)")
+    ax.set_ylabel("% Cytotoxicity / % Killing")
+    ax.set_title("Reference vs Test (Linear Range)")
+    ax.grid(True)
+    ax.legend(title="Sample")
+    st.pyplot(fig)
 
     # Fit lines
     ref_subset = df[df["Sample"] == "Reference"]
@@ -58,6 +65,6 @@ if uploaded_file:
     st.write(f"Test Intercept: **{test_intercept:.2f}**")
     st.write(f"**Relative Potency (RP): {relative_potency:.2f}**")
 
-    # Optional: Check parallelism
+    # Check parallelism
     slope_difference = abs(ref_slope - test_slope)
     st.write(f"Slope Difference (abs): **{slope_difference:.2f}**")
