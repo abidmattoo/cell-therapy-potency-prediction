@@ -130,6 +130,18 @@ Includes:
 - 📉 Shelf life estimation
 - 📈 Interactive temperature-based modeling
 
+---
+
+## 🧫 Streamlit App: Cytokine Fingerprint Potency Predictor
+
+Predict **Potency (%)** based on simulated cytokine fingerprint (IL-2, IFN-γ, TNF-α, GM-CSF).
+
+▶️ [Launch Cytokine Fingerprint Potency Predictor](https://cell-therapy-potency-prediction-g7vcej4k4lmvoqbqkde8vt.streamlit.app/))
+
+Includes:
+- ✅ True formula-based potency prediction
+- 📈 Dynamic cytokine contribution visualization
+- 🔍 Input IL-2, IFN-γ, TNF-α, GM-CSF and predict potency interactively
 
 ## 👤 Author
 
