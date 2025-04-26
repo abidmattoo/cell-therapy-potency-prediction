@@ -66,4 +66,5 @@ if uploaded_file:
     # Optional: Check parallelism
     slope_difference = abs(ref_slope - test_slope)
     st.write(f"Slope Difference (abs): **{slope_difference:.2f}**")
-    matplotlib
+    import matplotlib.pyplot as plt
+
