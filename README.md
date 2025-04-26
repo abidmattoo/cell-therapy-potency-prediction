@@ -142,7 +142,7 @@ Includes:
 - ✅ True formula-based potency prediction
 - 📈 Dynamic cytokine contribution visualization
 - 🔍 Input IL-2, IFN-γ, TNF-α, GM-CSF and predict potency interactively
-seaborn
+
 
 ## 👤 Author
 
