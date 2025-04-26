@@ -68,3 +68,32 @@ if uploaded_file:
     # Check parallelism
     slope_difference = abs(ref_slope - test_slope)
     st.write(f"Slope Difference (abs): **{slope_difference:.2f}**")
+# Allow user to download calculated results
+st.subheader("⬇️ Download Results")
+results_df = pd.DataFrame({
+    "Parameter": [
+        "Reference Slope",
+        "Reference Intercept",
+        "Test Slope",
+        "Test Intercept",
+        "Relative Potency (RP)",
+        "Slope Difference"
+    ],
+    "Value": [
+        ref_slope,
+        ref_intercept,
+        test_slope,
+        test_intercept,
+        relative_potency,
+        slope_difference
+    ]
+})
+
+csv = results_df.to_csv(index=False).encode('utf-8')
+
+st.download_button(
+    label="Download Results as CSV",
+    data=csv,
+    file_name='relative_potency_results.csv',
+    mime='text/csv',
+)
