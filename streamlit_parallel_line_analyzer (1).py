@@ -80,6 +80,5 @@ st.download_button(
     file_name='relative_potency_results.csv',
     mime='text/csv',
 )
-  
-   import matplotlib.pyplot as plt
+  import matplotlib.pyplot as plt
 
