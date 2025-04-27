@@ -142,6 +142,30 @@ Includes:
 - ✅ True formula-based potency prediction
 - 📈 Dynamic cytokine contribution visualization
 - 🔍 Input IL-2, IFN-γ, TNF-α, GM-CSF and predict potency interactively
+---
+
+## 🧬 Parallel Line Bioassay Analyzer (Streamlit App)
+
+Analyze **Reference vs Test bioassay data** using Parallel Line Analysis (PLA) and calculate **Relative Potency (RP)**.
+
+### 📈 Features:
+- Upload experimental CSV data (E:T Ratio, % Killing, Sample)
+- Visualize dose-response curves (log-scale E:T ratio)
+- Fit separate parallel lines for Reference and Test
+- Calculate slopes, intercepts, and **Relative Potency (RP)**
+- Check slope difference to assess parallelism
+- Download analysis results as a CSV file
+
+### 📂 How to Use:
+- Prepare a CSV file with columns: `E_T_Ratio`, `Killing(%)`, `Sample`
+- Upload it in the Streamlit app
+- View fitted plots and calculated parameters
+- Download your results easily
+
+### 🚀 Launch the App:
+[Open Parallel Line Bioassay Analyzer](https://cell-therapy-potency-app-eavqd49wfhzjw9euxnw2n5.streamlit.app/))
+
+---
 
 
 ## 👤 Author
