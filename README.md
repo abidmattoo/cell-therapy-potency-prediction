@@ -145,6 +145,23 @@ Includes:
 ---
 
 ## 🧬 Parallel Line Bioassay Analyzer (Streamlit App)
+st.markdown("""
+### 🧪 How to Use This App
+
+1. 📂 Prepare a CSV file with **three columns**:
+   - `E_T_Ratio` (Effector:Target ratio, like 1, 2, 5, 10)
+   - `Killing(%)` (% cytotoxicity or % cell killing)
+   - `Sample` (Reference or Test)
+
+2. 📈 Upload your CSV file using the uploader below.
+
+3. 📊 View fitted parallel lines, calculated Relative Potency (RP), and download your analysis.
+
+---
+
+🔽 **Don't have a CSV?**  
+[Download a Sample CSV file here](https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME/main/sample_parallel_line_data.csv)
+""")
 
 Analyze **Reference vs Test bioassay data** using Parallel Line Analysis (PLA) and calculate **Relative Potency (RP)**.
 
