@@ -160,7 +160,14 @@ st.markdown("""
 ---
 
 🔽 **Don't have a CSV?**  
-[Download a Sample CSV file here](https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME/main/sample_parallel_line_data.csv)
+[Download a Sample CSV file here](https://raw.githubusercontent.com/abidmattoo/cell-therapy-potency-prediction/main/sample_parallel_line_data.csv)
+""")
+
+
+---
+
+🔽 **Don't have a CSV?**  
+[Download a Sample CSV file here](https://raw.githubusercontent.com/abidmattoo/cell-therapy-potency-prediction/main/sample_parallel_line_data.csv))
 """)
 
 Analyze **Reference vs Test bioassay data** using Parallel Line Analysis (PLA) and calculate **Relative Potency (RP)**.
