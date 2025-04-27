@@ -163,7 +163,7 @@ Analyze **Reference vs Test bioassay data** using Parallel Line Analysis (PLA) a
 - Download your results easily
 
 ### 🚀 Launch the App:
-[Open Parallel Line Bioassay Analyzer](https://cell-therapy-potency-app-eavqd49wfhzjw9euxnw2n5.streamlit.app/))
+[Open Parallel Line Bioassay Analyzer](https://cell-therapy-potency-app-eavqd49wfhzjw9euxnw2n5.streamlit.app/)))
 
 ---
 
