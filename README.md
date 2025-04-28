@@ -75,37 +75,39 @@ jupyter notebook
 ```
 ---
 
-## 🆕 Cytotoxicity-Based Potency Classifier (70–130%)
+🆕 Cytotoxicity-Based Potency Classifier (70–130%)
 
-📄 [Cytotoxicity_Potency_Classifier.ipynb](./Cytotoxicity_Potency_Classifier.ipynb)
+📄 Notebook: Cytotoxicity_Potency_Classifier.ipynb
 
-This notebook simulates a **cytotoxicity-based potency assay** (e.g., One-Titer Glo) and classifies whether a batch **passes release criteria** (70–130%) based on CMC inputs like:
+This notebook simulates a cytotoxicity-based potency assay (e.g., One-Titer Glo) and classifies whether a batch **passes release criteria** (70–130%) based on key CMC inputs:
 
 - Transduction efficiency
 - Viability
 - Activation marker expression
 - Passage number
 
-Includes:
-- ✅ Binary classification model (`RandomForestClassifier`)
-- 📊 Confusion matrix, ROC curve, accuracy
-- 🔍 Feature importance analysis
-
-Then open `Potency_Model_Abid.ipynb` and run the notebook.
 ---
 
-## 🌐 Streamlit App: Cytotoxicity Classifier
-
-🧬 Predict whether a cell therapy batch passes cytotoxicity-based release criteria (70–130%) using Random Forest.
-
-▶️ [Launch Cytotoxicity Classifier on Streamlit](https://cytotoxicitypotencyclassifieripynb-hz9tt3cfnucrqcmzjf2nqu.streamlit.app/))
-
-Includes:
-- ✅ Binary classification (`RandomForestClassifier`)
-- 📊 Confusion matrix, ROC curve, accuracy
-- 📈 Feature importance bar plot
+### 📈 Key Features:
+- ✅ Binary classification model (**RandomForestClassifier**)
+- 📊 Confusion matrix, ROC curve, and model accuracy
+- 🔍 Feature importance analysis (feature importance ranking)
 
 ---
+
+### 🚀 How to Use:
+- Open the notebook: **Cytotoxicity_Potency_Classifier.ipynb** (or your correct filename)
+- Execute all cells to simulate data, train the model, and evaluate potency classification.
+
+---
+
+### 🌐 Launch the Web App:
+[👉 Click here to open the Cytotoxicity Potency Classifier (Streamlit App)](https://cytotoxicitypotencyclassifieripynb-hz9tt3cfnucrqcmzjf2nqu.streamlit.app/)
+
+(Upload your CMC attributes and predict batch pass/fail based on 70–130% potency release range.)
+
+---
+
 
 ## ⚙️ Streamlit App: DOE Potency Optimizer
 
